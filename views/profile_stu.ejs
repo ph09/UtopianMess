@@ -1,0 +1,37 @@
+<%- include ('head_stu') %>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%=data[0].name%></h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
+            <div class=" col-md-9 col-lg-9 "> 
+              <table class="table table-user-information">
+                <tbody>
+                  <tr>
+                    <td>Mess Roll No:</td>
+                    <td><%=data[0].mess_rollno%></td>
+                  </tr>
+                  <tr>
+                    <td>Roll No:</td>
+                    <td><%=data[0].rollno%></td>
+                  </tr>
+                  <tr>
+                    <td>Phone No:</td>
+                    <td><%=data[0].phone_no%></td>
+                  </tr>
+                  <tr>
+                    <td>Email Id:</td>
+                    <td><%=data[0].email%></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+ <%- include ('footer') %>

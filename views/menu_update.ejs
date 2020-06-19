@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+      
+    <meta charset="UTF-8">
+    <title>Menu update</title>
+    <link rel = "stylesheet" href = "common_home.css">
+    <link rel = "stylesheet" href = "head_mess.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="userCtrl" id="clrblk">
+    <div class="container col-sm-12" id="mainform">
+            <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                                                           
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Update Menu</div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="/home_mes/menu_history">show menu history</a></div>
+                        </div> 
+                        <div class="panel-body" >
+                            <form class="form-horizontal" role="form" method="post" action="/home_mes/update_menu" onSubmit="return checkblank(this);">
+                                <% if (message.length > 0) { %>
+                                                                                                            <div class="alert alert-success col-sm-12"><%= message %></div>
+                                                                                                <% } %>
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="Breakfast" class="col-md-3 control-label">Breakfast</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="breakfast" placeholder="Breakfast">
+                                    </div>
+                                </div>
+                               
+                                <div class="form-group">
+                                    <label for="lunch" class="col-md-3 control-label">Lunch</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="lunch" placeholder="Lunch">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="Snacks" class="col-md-3 control-label">Snacks</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="snacks" placeholder="Snacks">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="Dinner" class="col-md-3 control-label">Dinner</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="dinner" placeholder="Dinner">
+                                    </div>
+                                </div>
+                            
+ 
+                                <div class="form-group">
+                                    <!-- Button -->                                       
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Update</button>
+                                        
+                                    </div>
+                                </div>
+                               
+                                
+                                
+                                
+                            </form>
+                         </div>
+                    </div>
+              
+                
+         </div>
+    </div>
+   
+</body>
+</html>
+ 

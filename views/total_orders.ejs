@@ -1,0 +1,24 @@
+<%- include ('head_mess') %>
+<table class="table table-striped table-primary">
+        <thead>
+          <tr>
+            <th>Meal Type</th>
+            <th>Total number of orders placed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%if (data.length >0){ %>
+          <% data.forEach(function(row){ %>
+          <tr>
+            <td><%= row.meal_type %></td>
+            <td><%= row.response %></td>
+          </tr>
+          <% })}else{ %>
+            <tr>
+                <td colspan="6">No Record Found</td>
+                
+              </tr>
+            <% } %>
+        </tbody>
+      </table>
+ <%- include ('footer') %>
